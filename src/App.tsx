@@ -1,7 +1,5 @@
-import './App.css';
-
-function App() {
-  return <div className="App">TicTacToe</div>;
+const App = () => {
+  return <div className="bg-red-500">TicTacToe</div>;
 }
 
 export default App;
