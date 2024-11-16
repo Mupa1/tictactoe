@@ -16,9 +16,12 @@ const Game: React.FC = () => {
   };
 
   const winner = calculateWinner(board);
+  const isDraw = !winner && board.every((square) => square !== null);
   const status = winner
     ? `Winner: ${winner}`
-    : `Next player: ${isXNext ? 'X' : 'O'}`;
+    : isDraw
+      ? 'Its a Draw!'
+      : `Next player: ${isXNext ? 'X' : 'O'}`;
 
   return (
     <div className="flex flex-col items-center mt-10">
